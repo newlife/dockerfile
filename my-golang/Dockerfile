@@ -27,6 +27,10 @@ RUN \
 
 # Install required packages
 RUN \
-    apt-get dist-upgrade -y && apt-get install -y golang emacs
+    apt-get dist-upgrade -y && apt-get install -y golang
+RUN \
+    apt-get update -y && apt-get install -y git
+
+VOLUME ["/root/go"]
 
 CMD ["/bin/bash"]
