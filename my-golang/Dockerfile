@@ -31,6 +31,10 @@ RUN \
 RUN \
     apt-get update -y && apt-get install -y git
 
+#RUN go get github.com/nats-io/gnatsd && go get github.com/nats-io/go-nats
+
 VOLUME ["/root/go"]
 
+WORKDIR /root
+EXPOSE 4222 8222
 CMD ["/bin/bash"]
